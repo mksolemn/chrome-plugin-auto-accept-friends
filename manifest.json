@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Friend Game - enjoyer",
+    "version": "3.0.0",
+    "description": "Auto invite to like fb page",
+
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+
+    "content_scripts": [{
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": ["jquery-3.1.1.min.js", "scripts/enjoyer-ui.js", "scripts/profile-navigator.js", "scripts/accept-requests.js", "scripts/add-to-group.js"],
+        "css": ["styles/styles.css"]
+    }],
+
+    "web_accessible_resources": [
+        "styles/*",
+        "views/*"
+    ],
+    "permissions": [
+        "<all_urls>",
+        "storage"
+    ]
+}
